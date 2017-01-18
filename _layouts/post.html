@@ -17,12 +17,12 @@ layout: page
 
 <div class="post-nav">
   {% if page.next %}
-    <a class="left btn btn-link" href="{{page.next}}">Previous</a>
+    <a class="left btn btn-link" href="{{page.next.url}}">Previous</a>
   {% else %}
     <a class="left btn btn-link disabled">Previous</a>
   {% endif %}
   {% if page.previous %}
-    <a class="right btn btn-link" href="{{page.previous}}">Next</a>
+    <a class="right btn btn-link" href="{{page.previous.url}}">Next</a>
   {% else %}
     <a class="right btn btn-link disabled">Next</a>
   {% endif %}
