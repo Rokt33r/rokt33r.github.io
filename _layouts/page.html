@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <nav class="left-nav col-md-3">
+      <header>
+        <h2><a href="/">Rokt33r</a></h2>
+        <div>
+          <a class="ui basic button" href="https://github.com/rokt33r" target="_blank">
+            <i class="github icon"></i> Github
+          </a>
+
+          <a class="ui basic button" href="https://twitter.com/rokt33r" target="_blank">
+            <i class="twitter icon"></i> Twitter
+          </a>
+        </div>
+      </header>
+
+      <ul class="left-nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/devnotes">Dev Notes</a></li>
+      </ul>
+      <footer>
+        <p class="copyright">&copy; {{ site.time | date: '%Y' }} Junyoung Choi.<br/>All rights reserved.</p>
+      </footer>
+    </nav>
+
+    <main class="main col-md-9">
+      {{content}}
+    </main>
+
+  </div>
+
+</div>

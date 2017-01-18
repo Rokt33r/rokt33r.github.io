@@ -1,0 +1,42 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: page
+title: Home
+---
+
+<div class="posts">
+  <h2>Recent posts</h2>
+  {% for post in paginator.posts %}
+  <hr/>
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="main-paginator">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="left" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+      <a class="left" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+      <a class="left disabled">Newer</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="right" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <a class="right disabled">Older</a>
+  {% endif %}
+</div>
