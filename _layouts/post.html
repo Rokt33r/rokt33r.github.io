@@ -1,47 +1,57 @@
 ---
 layout: page
 ---
+<div class="gfm">
+  <a href="/">Back to Home</a>
 
-<a href="/">Back to Home</a>
+  <h1 class="post-title" id="head">
+    {{ page.title }}
+    <small class="post-date">{{ page.date | date_to_string }}</small>
+  </h1>
 
-<h1 class="post-title">{{ page.title }}</h1>
-<span class="post-date">Post Date: {{ page.date | date_to_string }}</span>
+  {% for category in page.categories %}
+    {{ category }}
+  {% endfor %}
 
-{% for category in page.categories %}
-  {{ category }}
-{% endfor %}
+  <div class="post-content">
+    {{ content }}
+  </div>
 
-<div class="post-content">
-  {{ content }}
-</div>
+  <div class="post-nav">
+    {% if page.next %}
+      <a class="left btn btn-link" href="{{page.next.url}}">Previous</a>
+    {% else %}
+      <a class="left btn btn-link disabled">Previous</a>
+    {% endif %}
+    {% if page.previous %}
+      <a class="right btn btn-link" href="{{page.previous.url}}">Next</a>
+    {% else %}
+      <a class="right btn btn-link disabled">Next</a>
+    {% endif %}
+  </div>
 
-<div class="post-nav">
-  {% if page.next %}
-    <a class="left btn btn-link" href="{{page.next.url}}">Previous</a>
-  {% else %}
-    <a class="left btn btn-link disabled">Previous</a>
+  {% if site.related_posts.length > 0 %}
+  <div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+      {% for post in site.related_posts limit:3 %}
+        <li>
+          <h3>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+              <small>{{ post.date | date_to_string }}</small>
+            </a>
+          </h3>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
   {% endif %}
-  {% if page.previous %}
-    <a class="right btn btn-link" href="{{page.previous.url}}">Next</a>
-  {% else %}
-    <a class="right btn btn-link disabled">Next</a>
-  {% endif %}
 </div>
 
-{% if site.related_posts.length > 0 %}
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-{% endif %}
+<script>
+function initScroll () {
+  window.scrollTo(0, document.getElementById('head').offsetTop - 100)
+}
+document.body.onload = initScroll
+</script>
