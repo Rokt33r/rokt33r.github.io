@@ -18,8 +18,14 @@ Available for hire
 
 Mainly using React, Electron and Node.js.
 
-## Language
+## Languages
 
 Korean(native), Japanese(almost fluent) and English(a little)
+
+## Contact
+
+Create a new issue if you want to contact to me. :grin:
+
+https://github.com/Rokt33r/rokt33r.github.io/issues
 
 <a href="/">Back to Home</a>
