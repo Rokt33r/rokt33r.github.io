@@ -27,7 +27,6 @@ paginate: 5
 
 permalink: pretty
 
-
 # Build settings
 markdown: kramdown
 kramdown:
@@ -37,7 +36,6 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
-  - jekyll-compass
 exclude:
   - Gemfile
   - Gemfile.lock

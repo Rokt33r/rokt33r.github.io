@@ -22,6 +22,3 @@ group :jekyll_plugins do
   gem 'jekyll-watch'
   gem "jekyll-feed", "~> 0.6"
 end
-
-gem 'bootstrap', '~> 4.0.0.alpha6'
-gem 'jekyll-compass'
