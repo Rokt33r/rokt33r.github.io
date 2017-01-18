@@ -110,6 +110,7 @@ $screen-md-width: 767px;
 
 .post-nav {
   @include clearfix;
+  margin-bottom: 15px;
   .left {
     float: left;
   }

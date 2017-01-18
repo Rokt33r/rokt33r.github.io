@@ -17,8 +17,6 @@ layout: page
     {{ content }}
   </div>
 
-  {% include comments.html %}
-
   <div class="post-nav">
     {% if page.next %}
       <a class="left btn btn-link" href="{{page.next.url}}">Previous</a>
@@ -49,6 +47,8 @@ layout: page
     </ul>
   </div>
   {% endif %}
+
+  {% include comments.html %}
 </div>
 
 <script>
