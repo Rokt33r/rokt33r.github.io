@@ -36,6 +36,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock

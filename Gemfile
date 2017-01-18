@@ -21,4 +21,6 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-watch'
   gem "jekyll-feed", "~> 0.6"
+  gem 'jemoji'
 end
+
