@@ -44,7 +44,7 @@ class LoggingButton extends React.Component {
 AST는 정말 복잡하기 때문에 이게없으면 뭐가 어디있는지 파악하기 정말 어려워져요. 물론 익숙해지면 필요없겠지만 처음다루시면 꼭 여기에 예제코드 넣어보세요!
 넣고 커서를 움직이면 지금 선택한 부분이 어떻게 파싱되어있는지 간단히 알 수 있습니다!
 
-![AST Explorer](/public/images/ast-explorer.png)
+![AST Explorer](/assets/images/ast-explorer.png)
 
 > 바빌론 버젼별로 약간 타입이름이 다르므로 꼭 **바빌론6**를 선택해주세요!
 
