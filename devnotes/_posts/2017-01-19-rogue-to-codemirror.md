@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 쿨하지 못한 Rogue
+title: Rogue 대신 Codemirror!
 date: 2017-01-19 14:00:00 +0900
-tags: codemirror, jekyll
+tags: [codemirror, jekyll]
 ---
 
 신택스 하이라이트에 JSX가 제대로 작동하지 않는 듯해서 jneen/rouge의 이슈트래커를 보니 [이런 코멘트](https://github.com/jneen/rouge/issues/275#issuecomment-149714664)가 있어서 놀랬습니다.
@@ -18,12 +18,13 @@ tags: codemirror, jekyll
 
 먼저 로그를 꺼야겠죠...
 
-`_config.yml`에서 크램다운의 신택스하이라이터에 `nil`을 넣어줍니다.
+`_config.yml`에서 크램다운의 하이라이트 옵션을 수정합니다.
 
 ```yml
 markdown: kramdown
 kramdown:
-  syntax_highlighter: nil
+  syntax_highlighter_opts:
+    disable: true
 ```
 
 ## Apply Codemirror
