@@ -11,9 +11,16 @@ layout: page
     <small class="post-date">{{ page.date | date_to_string }}</small>
   </h1>
 
-  {% for category in page.categories %}
-    {{ category }}
-  {% endfor %}
+  <div class="post-info">
+    {% if page.tags.size > 0 %}
+      <span class="post-info-tags">
+        <i class="fa fa-tags"></i>
+        {% for tag in page.tags %}
+          <span class="post-info-tags-item">{{tag}}</span>
+        {% endfor %}
+      </span>
+    {% endif %}
+  </div>
 
   <div class="post-content">
     {{ content }}

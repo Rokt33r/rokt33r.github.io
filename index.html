@@ -20,6 +20,17 @@ title: Home
       </small>
     </h1>
 
+    <div class="post-info">
+      {% if post.tags.size > 0 %}
+        <span class="post-info-tags">
+          <i class="fa fa-tags"></i>
+          {% for tag in post.tags %}
+            <span class="post-info-tags-item">{{tag}}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+
     {{ post.content }}
   </div>
   {% endfor %}
