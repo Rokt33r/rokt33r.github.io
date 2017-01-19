@@ -7,3 +7,39 @@
   ga('create', 'UA-50038801-4', 'auto');
   ga('send', 'pageview');
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/runmode/runmode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/mode/meta.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/loadmode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/overlay.min.js"></script>
+<script>
+
+CodeMirror.modeURL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/mode/%N/%N.js'
+var codeBlocks = document.querySelectorAll('pre code')
+
+function parseMode (mode) {
+  switch (mode) {
+    case 'js':
+    case 'javascript':
+      mode = 'jsx'
+  }
+  let syntax = CodeMirror.findModeByName(mode)
+  if (syntax == null) syntax = CodeMirror.findModeByName('Plain Text')
+  return syntax
+}
+
+_.forEach(codeBlocks, block => {
+  var syntax = parseMode(block.className.substring(9))
+
+  CodeMirror.requireMode(syntax.mode, () => {
+    var value = _.unescape(block.innerHTML)
+    block.innerHTML = ''
+    block.parentNode.className = `cm-s-dracula CodeMirror`
+    CodeMirror.runMode(value, syntax.mime, block, {
+      tabSize: 2
+    })
+  })
+})
+</script>

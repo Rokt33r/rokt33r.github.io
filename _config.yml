@@ -31,7 +31,7 @@ permalink: pretty
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
+  syntax_highlighter: nil
 gems:
   - jekyll-feed
   - jekyll-paginate

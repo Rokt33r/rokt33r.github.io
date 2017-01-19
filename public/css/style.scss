@@ -10,8 +10,11 @@
 
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
-* {
+body {
   font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+.CodeMirror {
+  height: inherit;
 }
 
 $brand-color: #63ADFC;
@@ -84,6 +87,7 @@ $screen-md-width: 767px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 10px 0 200px;
+  overflow: auto;
 }
 
 @media (max-width: $screen-md-width) {
@@ -120,6 +124,19 @@ $screen-md-width: 767px;
 }
 .post-top {
   margin: 25px 0;
+}
+.post-info {
+  margin-bottom: 15px;
+  color: gray;
+  .post-info-tags {
+    margin-left: 15px;
+  }
+  .post-info-tags-item {
+    background-color: $brand-color;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+  }
 }
 .post-title small {
   color: gray;
