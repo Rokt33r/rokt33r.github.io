@@ -194,4 +194,4 @@ module.exports = function plugin(args) {
 };
 ```
 
-이상입니다. 아직 바벨의 파싱원리는 아직 저도 잘 모르겠지만, 이번 기회로 이미 파싱된 AST를 트랜스파일하는건 그렇게 어렵지 않아진 느낌이 듭니다. :sunglasses::sunglasses:
+이상입니다. 바벨의 파싱원리는 아직 저도 잘 모르겠지만, 이번 기회로 이미 파싱된 AST를 트랜스파일하는건 그렇게 어렵지 않아진 느낌이 듭니다. :sunglasses::sunglasses:
