@@ -26,6 +26,6 @@ Korean(native), Japanese(almost fluent) and English(a little)
 
 Create a new issue if you want to contact to me. :grin:
 
-https://github.com/Rokt33r/rokt33r.github.io/issues
+[rokt33r.github.io/issues](https://github.com/Rokt33r/rokt33r.github.io/issues)
 
 <a href="/">Back to Home</a>
