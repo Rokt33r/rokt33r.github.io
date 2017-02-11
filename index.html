@@ -10,7 +10,6 @@ title: Home
   <h2>Recent posts</h2>
   {% for post in paginator.posts %}
   <div class="post gfm">
-    <hr/>
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
@@ -32,6 +31,7 @@ title: Home
     </div>
 
     {{ post.content }}
+    <hr class="post-divider"/>
   </div>
   {% endfor %}
 </div>
