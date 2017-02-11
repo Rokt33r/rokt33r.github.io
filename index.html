@@ -6,7 +6,7 @@ layout: page
 title: Home
 ---
 
-<div class="posts">
+<div class="posts recent">
   <h2>Recent posts</h2>
   {% for post in paginator.posts %}
   <div class="post gfm">
@@ -31,7 +31,6 @@ title: Home
     </div>
 
     {{ post.content }}
-    <hr class="post-divider"/>
   </div>
   {% endfor %}
 </div>
