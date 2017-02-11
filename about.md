@@ -12,7 +12,9 @@ Junyoung Choi, Living in Japan and Loving programming, Starcraft2, musics and fl
 
 ## Status
 
-Available for hire
+Available for hire if you are wiling to pay 10000 dollars monthly excluding tax.
+
+> I just want to focus on my project for now.
 
 ## Stack
 
@@ -24,8 +26,6 @@ Korean(native), Japanese(almost fluent) and English(a little)
 
 ## Contact
 
-Create a new issue if you want to contact to me. :grin:
-
-[rokt33r.github.io/issues](https://github.com/Rokt33r/rokt33r.github.io/issues)
+You can find my e-mail on my github profile. :grin:
 
 <a href="/">Back to Home</a>
