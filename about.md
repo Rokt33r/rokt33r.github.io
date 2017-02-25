@@ -8,7 +8,7 @@ title: About Rokt33r
 
 # About Rokt33r
 
-<img src="/public/images/profile.png" alt="Astronaut - Rokt33r" width="220">
+<img src="/public/images/profile.png" alt="Rokt33r" width="220">
 
 일본에 거주하며 프로그래밍과 스타크래프트2 그리고 음악과 꽃을 좋아합니다.
 
@@ -25,6 +25,73 @@ I don't need any job for now. Only if you are wiling to pay more than 10000 doll
 주로 리액트, 일렉트론과 노드.js를 사용합니다.
 
 Mainly using React, Electron and Node.js.
+
+### Full List
+
+- Javascript
+  - React
+  - Electron
+  - Node.js
+  - Webpack
+  - Babel
+  - ECMA Script
+  - Jest, Mocha, Jasmine
+- Markdown
+  - Parsing/Rendering
+  - Custom plugins
+- CSS
+  - Stylus
+  - Sass
+  - Less
+- Web API
+  - Web Audio
+  - IndexedDB, WebSQL
+  - Web Socket
+  - Web RTC
+- DB
+  - MySQL
+  - MongoDB
+  - LevelDB
+  - CouchDB
+  - PouchDB
+  - Redis
+- Testing
+  - TDD
+  - BDD
+  - E2E Test(Selenium, PhantomJS)
+- AWS
+  - Elastic beanstalk
+  - RDS
+  - EC2
+  - Lambda
+  - S3
+  - Cloud watch
+  - Route 53
+- Misc
+  - Jekyll
+  - React Native
+  - Android app(Java)
+  - iOS app(Objective C)
+  - Raspberry pi
+  - Arduino
+  - Vagrant
+  - Virtual Box
+  - Ubuntu
+  - ArchLinux
+  - Fedora
+  - Fortran
+  - C
+  - Objective C
+  - Java
+    - JSP
+    - Tomcat
+  - Python
+    - Tkinter
+    - Opencv
+  - PHP
+    - Laravel
+    - Codeception
+  - Angular 1.*
 
 ## Languages
 
