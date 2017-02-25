@@ -8,6 +8,8 @@ title: About Rokt33r
 
 # About Rokt33r
 
+<img src="/public/images/profile.png" alt="Astronaut - Rokt33r" width="220">
+
 일본에 거주하며 프로그래밍과 스타크래프트2 그리고 음악과 꽃을 좋아합니다.
 
 Living in Japan and Loving programming, Starcraft2, musics and flowers.
