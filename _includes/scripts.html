@@ -14,8 +14,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/mode/meta.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/loadmode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/addon/mode/overlay.min.js"></script>
-<script>
 
+<script>
+// Redirect to HTTPS site
+if (location.protocol === 'http:' && !location.host.match(/^localhost/)) {
+  location.href = location.href.replace(/^http/, 'https')
+}
+</script>
+
+<script>
+// Highlightening Codeblock
 CodeMirror.modeURL = 'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.2/mode/%N/%N.js'
 var codeBlocks = document.querySelectorAll('pre code')
 
