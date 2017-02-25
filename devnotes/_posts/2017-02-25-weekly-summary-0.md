@@ -2,7 +2,7 @@
 layout: post
 title: Weekly Summary 0
 date: 2017-02-25 22:00:00 +0900
-tags: [markdown, remark, latex, npm, jest]
+tags: [weekly-summary]
 ---
 
 이제부터 주보를 작성 해보려고 한다.
