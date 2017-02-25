@@ -145,9 +145,10 @@ $screen-md-width: 767px;
     margin-left: 15px;
   }
   .post-info-tags-item {
-    background-color: $brand-color;
-    color: white;
-    padding: 5px 15px;
+    color: $brand-color;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid $brand-color;
     border-radius: 15px;
   }
 }
