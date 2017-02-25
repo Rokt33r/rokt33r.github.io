@@ -6,26 +6,38 @@ layout: gfm
 title: About Rokt33r
 ---
 
-# About
+# About Rokt33r
 
-Junyoung Choi, Living in Japan and Loving programming, Starcraft2, musics and flowers
+일본에 거주하며 프로그래밍과 스타크래프트2 그리고 음악과 꽃을 좋아합니다.
+
+Living in Japan and Loving programming, Starcraft2, musics and flowers.
 
 ## Status
 
-Available for hire if you are wiling to pay 10000 dollars monthly excluding tax.
+당장 취직할 의사가 없습니다. 세후 10000달러 이상의 월급이 지불 가능하시다면 고려해보겠습니다.
 
-> I just want to focus on my project for now.
+I don't need any job for now. Only if you are wiling to pay more than 10000 dollars monthly excluding tax, I will consider your offer.
 
 ## Stack
+
+주로 리액트, 일렉트론과 노드.js를 사용합니다.
 
 Mainly using React, Electron and Node.js.
 
 ## Languages
 
-Korean(native), Japanese(almost fluent) and English(a little)
+- Korean(native)
+- Japanese(almost fluent)
+- English(Barely possible to commit opensource projects of github)
+
+## History
+
+[Boostnote developer/maintainer (2015-2016)](https://github.com/BoostIO/Boostnote/graphs/contributors)
 
 ## Contact
 
-You can find my e-mail on my github profile. :grin:
+제 깃허브 프로필에서 이메일을 찾으 실 수 있습니다. :grin:
+
+You can find my e-mail on my github profile.
 
 <a href="/">Back to Home</a>

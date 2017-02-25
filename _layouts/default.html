@@ -24,18 +24,19 @@
           </header>
 
           <ul class="left-nav-menu">
-            <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/devnotes">Dev Notes</a></li>
+            <li><a href="/weekly-archives">Weekly Archives</a></li>
+            <li><a href="/projects">Projects</a></li>
           </ul>
-          <footer>
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="License: CC BY-NC-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg"></a>
-            <p class="copyright">&copy; {{ site.time | date: '%Y' }} Junyoung Choi.<br/>All rights reserved.</p>
-          </footer>
         </nav>
 
         <main class="main col-md-9">
           {{ content }}
+          <footer class="footer gfm">
+            <p class="copyright">&copy; {{ site.time | date: '%Y' }} Junyoung Choi.<br/>All rights reserved.</p>
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="License: CC BY-NC-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg"></a>
+          </footer>
         </main>
 
     </div>

@@ -20,6 +20,16 @@ body {
 $brand-color: #63ADFC;
 @import "typography";
 
+a {
+  text-decoration: none;
+  color: #4078c0;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
 
 $screen-md-width: 767px;
 
@@ -89,7 +99,11 @@ $screen-md-width: 767px;
   padding: 0 10px 0 200px;
   overflow: auto;
 }
-
+.footer {
+  text-align: center;
+  color: gray;
+  margin: 35px 0;
+}
 @media (max-width: $screen-md-width) {
   .container {
     flex-direction: column;
@@ -106,10 +120,6 @@ $screen-md-width: 767px;
     width: 100%;
     padding: 0 10px;
   }
-}
-
-.recent .post {
-  margin-bottom: 75px;
 }
 
 .post-content {

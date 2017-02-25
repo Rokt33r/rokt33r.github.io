@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Weekly Summary 0
+title: Weekly Archive 0
 date: 2017-02-25 22:00:00 +0900
-tags: [weekly-summary]
 ---
 
 이제부터 주보를 작성 해보려고 한다.

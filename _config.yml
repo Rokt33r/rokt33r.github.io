@@ -23,7 +23,7 @@ url: "https://rokt33r.github.io" # the base hostname & protocol for your site, e
 twitter_username: rokt33r
 github_username: rokt33r
 
-paginate: 5
+paginate: 10
 
 permalink: pretty
 

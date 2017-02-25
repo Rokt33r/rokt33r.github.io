@@ -2,17 +2,6 @@
   * {
     line-height: 1.6;
   }
-  a {
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-    color: $brand-color;
-  }
-
-  a:active,
-  a:hover {
-    outline-width: 0;
-    color: darken($brand-color, 10%);
-  }
 
   strong {
     font-weight: bolder;
