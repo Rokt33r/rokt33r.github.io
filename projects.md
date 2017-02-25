@@ -8,7 +8,7 @@ title: Projects of Rokt33r
 
 # Projects
 
-제가 운영하는 프로젝트들입니다.
+제가 운영하고 있는 프로젝트들입니다.
 
 ## [Remark Math][remark-math]
 
