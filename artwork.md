@@ -5,7 +5,9 @@ title: Projects of Rokt33r
 
 # Artwork
 
-가~끔 디자인이나 그림도 그립니다. 여기의 모든 그림에 대한 역시 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="License: CC BY-NC-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg"></a>로 제공됩니다.
+가끔 디자인이나 그림도 그립니다. 여기의 모든 그림에 대해선 **라이센스를 제공하지 않습니다.**
+
+**No License** for all images of this page.
 
 ## Rokt33r
 
