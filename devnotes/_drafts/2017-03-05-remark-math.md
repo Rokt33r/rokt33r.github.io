@@ -2,20 +2,42 @@
 layout: post
 title: Remark Math를 만들면서 정리해본 NPM 라이브러리 배포 노하우
 date: 2017-03-05 22:00:00 +0900
-tags: [markdown, remark, latex, npm, jest]
+tags: [markdown, remark, math, npm, jest, lerna]
 ---
 
-본 포스팅은 Charcoal 프로젝트를 위한 [Remark][remark]의 수학기호 블럭/인라인 처리를 위한 플러그인 [Remark Math][remark-math]를 만드는 포스팅이다.
+본 포스팅은 [Remark Math][remark-math]의 개발 과정을 통해 NPM 라이브러리의 디플로이 노하우를 공유하려 합니다.
 
-무엇을 어떻게 만드는지에 대한 분석부터, NPM으로 어떻게 디플로이하는지까지 다룬다.
+어려운 얘기 하는 것보다 주니어 개발자 입장에서도 충분히 안정적인 사용이 가능한 라이브러리의 개발 플로우를 알려주는 것을 목적으로 합니다.
 
-## [Remark][remark]?
+- 동기파악
+- 프로토타입 제작
+- 피어 리뷰 / 반영
+- 테스트
+- CI
 
-상당히 체계적으로 설계된 마크다운 프로세서 라이브러리이다. 이 라이브러리의 강점은 상당히 모듈화가 잘 되어있기 때문에 이곳 저곳을 뜯어보거나 개조 할 수 있다. 물론 모듈화가 심하기 때문에 각 모듈들이 무엇을 하는지에 대해 파악하기 어려운 점이 있긴 하지만 파싱하는 어프로치등 상당히 배울만한 것이 많은 라이브러리 이기도 하다.
+## Remark Math?
 
-> [제작자 Wooorm](http://wooorm.com/)씨는 자연어, 마크업 언어 처리에 상당한 기술을 가지고 있기에, 이 라이브러리의 기반 라이브러리로 HTML파서나 자연어 파서 그리고 이를 활용한 문법 린터까지 오픈소스로 개발 하고 있다. 이 쪽 분야에 흥미가 있다면 꼭 이 분이 만든 라이브러리를 참고하길 추천한다!
+[Remark][remark] 마크다운 처리기를 위한 수식 라이브러리입니다.
 
-먼저 Remark의 인터페이스, [Unified][wooorm/unified]를 살펴보자. 프로세서 인터페이스로써, 파서, 트랜스포머, 컴파일러러가 통합된 텍스트를 가공하기위한 일종의 레시피와 같은 역할을 한다.
+지금은 3가지 라이브러리로 구성되어 있으며 파서와 트랜스포머로 만들어져 있습니다.
+
+TeX처럼 `$`와 `$$`를 통해 TeX 수식코드를 넣을 수 있는 인라인과 블럭요소를 파싱하는 부분을 추가시켜줍니다.
+
+그리고 파싱된 수식 요소들을 KaTeX를 통해 HTML로 렌더링 시켜줍니다.
+
+### Remark
+
+먼저 플러그인을 작성하려면 원래 라이브러리가 무엇인지 알아야겠죠?
+
+Remark는 플러그인 기반의 마크다운 처리기(프로세서)입니다. 이미 자바스크립트로 구현된 마크다운 처리기는 [markdown-it]이나 [marked], [showdown]등 정말 많습니다.
+
+제가 그중에 [Remark][remark]를 선택한 이유는 단순하게 마크다운을 HTML로 변환하는게 아니라 AST로 변환시킨후 컴파일하기 때문에 쉽고 유연하게 개발이 가능해 보였어요.
+
+> #### 추상화 구문 트리(Abstract Syntax Tree, AST)
+> 소스코드를 읽어들여 코드 구조를 추상적으로 트리 형식(JSON이나 XML로 표현가능한)으로 나타낸 것입니다.
+> 간단히 말해 소스 코드를 프로그래밍적으로 다루기 쉽게 해주는 것이죠. 예를 들면 바벨 역시 소스코드를 AST로 파싱하여 트랜스파일링을 행합니다.
+
+프로세서의 작업흐름은 다음과 같아요.
 
 ```
                      ┌──────────────┐
@@ -27,57 +49,31 @@ tags: [markdown, remark, latex, npm, jest]
   Input ──▶ │ Parser │ ──▶ Tree ──▶ │ Compiler │ ──▶ Output
             └────────┘              └──────────┘
 ```
+> [https://github.com/unifiedjs/unified#description](https://github.com/unifiedjs/unified#description)
 
-1. 마크다운 문서를 Abstract Syntax Tree(AST)로 파스한다.
-2. AST의 구조를 바꾼다.
+1. 마크다운 문서를 AST로 파스한다.
+2. AST의 내용을 트랜스포머로 변환시킨다.
 3. 컴파일러를 통해 AST를 다시 문자열로 바꾼다.
 
-좀 더 이해하기 쉬운 설명을 위해 JSON을 예로 들면 다음과 같은 느낌이다.
+이건, JSON 문자열을 다루는 것과 거의 비슷해요!
 
 1. JSON문자열을 Object로 파스한다.
-2. Object를 수정한다.
+2. Object를 자바스크립트 코드를 통해 수정한다.
 3. 다시 Object를 Stringify로 문자열화 시킨다.
 
-그럼 사용하는 코드를 살펴보자.
+고로,
 
-```js
-const remark = require('remark')
-const html = require('remark-html')
-const processor = remark().use(html)
 
-const targetText = '# hello'
+무엇을 어떻게 만드는지에 대한 분석부터, NPM으로 어떻게 디플로이하는지까지 다룬다.
 
-const parsedAST = process.parse(targetText)
-/* 타겟 문자열 => AST 트리 (파싱)
-{
-  "type": "root",
-  "children": [
-    {
-      "type": "heading",
-      "depth": 1,
-      "children": [
-        {
-          "type": "text",
-          "value": "hello",
-          "position": {
-            "start": {
-              "line": 1,
-              "column": 3,
-              "offset": 2
-            },
-  ... 생략
-*/
+## [Remark][remark]?
 
-processor.stringify(parsedAST)
-/* AST => HTML 문자열 (컴파일링)
-<h1>hello</h1>
-*/
+상당히 체계적으로 설계된 마크다운 프로세서 라이브러리이다. 이 라이브러리의 강점은 상당히 모듈화가 잘 되어있기 때문에 이곳 저곳을 뜯어보거나 개조 할 수 있다. 물론 모듈화가 심하기 때문에 각 모듈들이 무엇을 하는지에 대해 파악하기 어려운 점이 있긴 하지만 파싱하는 어프로치등 상당히 배울만한 것이 많은 라이브러리 이기도 하다.
 
-processor.process(targetText)
-/* 타겟 문자열 => AST => HTML 문자열 (파싱 & 컴파일링)
-<h1>hello</h1>
-*/
-```
+> [제작자 Wooorm](http://wooorm.com/)씨는 자연어, 마크업 언어 처리에 상당한 기술을 가지고 있기에, 이 라이브러리의 기반 라이브러리로 HTML파서나 자연어 파서 그리고 이를 활용한 문법 린터까지 오픈소스로 개발 하고 있다. 이 쪽 분야에 흥미가 있다면 꼭 이 분이 만든 라이브러리를 참고하길 추천한다!
+
+먼저 Remark의 인터페이스, [Unified][wooorm/unified]를 살펴보자. 프로세서 인터페이스로써, 파서, 트랜스포머, 컴파일러러가 통합된 텍스트를 가공하기위한 일종의 레시피와 같은 역할을 한다.
+
 ## 왜 만드나?
 
 물론, [remark-inline-math]라는 플러그인이 이미 존재하지만, 인라인만을 파싱할 뿐이기에 블럭도 파싱 가능하도록 한다. 또한, 렌더링 방법까지는 구현되있지 않으므로 이 부분까지 추가적인 개발을 한다.
@@ -599,8 +595,11 @@ npm i -D jest
 
 
 [remark]: https://github.com/wooorm/remark
+[markdown-it]: https://github.com/markdown-it/markdown-it
+[marked]: https://github.com/chjj/marked
+[showdown]: https://github.com/showdownjs/showdown
 [remark-inline-math]: https://github.com/bizen241/remark-inline-math
-[wooorm/unified]: https://github.com/wooorm/unified
+[wooorm/unified]: https://github.com/unifiedjs/unified
 [remark-math]: https://github.com/Rokt33r/remark-math
 [remark-html]: https://github.com/wooorm/remark-html
 [katex]: https://github.com/Khan/KaTeX
