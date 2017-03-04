@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remark Math
-date: 2017-02-20 22:00:00 +0900
+title: Remark Math를 만들면서 정리해본 NPM 라이브러리 배포 노하우
+date: 2017-03-05 22:00:00 +0900
 tags: [markdown, remark, latex, npm, jest]
 ---
 
