@@ -5,7 +5,7 @@ date: 2017-03-09 08:00:00 +0900
 tags: [lerna, npm, yarn]
 ---
 
-Remark Math를 배포하면서 모노리포를 구현하기 위해 [Lerna]를 사용한 노하우를 공유합니다.
+[Remark Math](https://github.com/Rokt33r/remark-math)를 배포하면서 모노리포를 구현하기 위해 [Lerna]를 사용한 노하우를 공유합니다.
 
 # 용어 설명
 
@@ -115,7 +115,7 @@ Changes:
 
 복수의 패키지를 관리하기 쉽게하기위해 만들었기 때문에 개발환경 역시 통합시키는게 관리하기 편하다고 생각해요. 물론 일괄적으로 `npm`명령을 실행시키는 커맨드가 있기는 해요. 대신, 각각의 패키지별로 스크립트를 관리하는건 그다지 모노리포를 사용할 필요가 없는 케이스이지 않을까 싶어요.
 
-고로, 저의 경우 개발에 필요한 모든 스크립트들은 루트 디렉토리의 `package.json`에 넣어 두었습니다.
+고로, 저의 경우 개발에 필요한 모든 스크립트들은 루트 디렉토리의 [`package.json`](https://github.com/Rokt33r/remark-math/blob/master/package.json)에 넣어 두었습니다.
 
 ## 루트 디렉토리의 `package.json`에선 `dependencies`와 `version`가 필요없다?
 
