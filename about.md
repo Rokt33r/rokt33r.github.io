@@ -14,12 +14,6 @@ title: About Rokt33r
 
 Living in Japan and Loving programming, Starcraft2, musics and flowers.
 
-## Status
-
-당장 취직할 의사가 없습니다. 세후 10000달러 이상의 월급이 지불 가능하시다면 고려해보겠습니다.
-
-I don't need any job for now. Only if you are wiling to pay more than 10000 dollars monthly excluding tax, I will consider your offer.
-
 ## Stack
 
 주로 리액트, 일렉트론과 노드.js를 사용합니다.
