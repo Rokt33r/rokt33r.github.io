@@ -14,13 +14,9 @@ title: Projects of Rokt33r
 
 [Remark]에 수식 작성이 가능한 인라인과 블럭요소를 읽는 파서와 이 요소들을 KaTeX를 통해 브라우저에서 볼 수 있도록 렌더링 해주는 라이브러리입니다.
 
-## Chalcoal
+## [한국어로 배우는 리액트](https://github.com/Rokt33r/learn-react-in-korean)
 
-마크다운 에디터입니다. 아직 프로토타입이 준비중입니다.
-
-## Fourteen
-
-캘린더 + 리마인더 + 칸반 + 저널 앱입니다. 아직 프로토타입이 준비중입니다.
+한국어로된 리액트 관련 포스팅이나 웹사이트의 모음입니다. 해외 포스팅들의 번역도 하고 있습니다.
 
 [Remark]: https://github.com/wooorm/remark
 [remark-math]: https://github.com/rokt33r/remark-math
