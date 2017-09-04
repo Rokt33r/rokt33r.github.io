@@ -8,15 +8,13 @@ title: About Rokt33r
 
 # About Rokt33r
 
-<img src="/public/images/profile.png" alt="Rokt33r" width="220">
+프로그래밍과 히오스 그리고 음악과 꽃을 좋아합니다.
 
-프로그래밍과 스타크래프트2 그리고 음악과 꽃을 좋아합니다.
-
-Loving programming, Starcraft2, musics and flowers.
+Loving programming, Heroes of the storm, musics and flowers.
 
 ## Stack
 
-주로 리액트, 일렉트론과 노드.js를 사용합니다.
+리액트, 타입스크립트, Node.js를 전문적으로 사용합니다.
 
 Mainly using React, Electron and Node.js.
 
@@ -91,10 +89,11 @@ Mainly using React, Electron and Node.js.
 
 - Korean(native)
 - Japanese(almost fluent)
-- English(Barely possible to commit opensource projects of github)
+- English(broken, though I'm working at the US company)
 
 ## History
 
+[Launch Enginner of Revisolution (2017-)]
 [Boostnote developer/maintainer (2015-2016)](https://github.com/BoostIO/Boostnote/graphs/contributors)
 
 ## Contact
