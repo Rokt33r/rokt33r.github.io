@@ -5,9 +5,7 @@ title: Projects of Rokt33r
 
 # Artwork
 
-가끔 디자인이나 그림도 그립니다. 여기의 모든 그림에 대해선 **라이센스를 제공하지 않습니다.**
-
-**No License** for all images of this page.
+가끔 디자인이나 그림도 그립니다.
 
 ## Rokt33r
 
