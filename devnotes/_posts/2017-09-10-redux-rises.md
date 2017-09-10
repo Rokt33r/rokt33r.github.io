@@ -299,6 +299,18 @@ expect(reducedState).not.toBe(defaultState)
 될것이다. 아마 이번달 중으로 작업할 것이므로 조금만 더 기다려줬으면 한다. (혹은 수직적으로 더 깊은 구조를
 만들어 카테고리화 시키는 것도 한가지 방법이다.)
 
+앞으로 할 건 HAMT와 Set 구조를 더 추가할 계획이다.
+
+## 마무리
+
+리덕스에서 느껴지는 여러가지 문제점들을 하나씩 태클해 보았다. 덕분에 타입스크립트를 좀 더 잘 다룰 수 있게
+되는 등 배운게 많은 거 같다.
+
+단, 아직까지 리덕스에서 아쉽다고 느껴지는 점은 언제나 코드가 너무 장황해진다는 것이다.
+
+어쩌면 CLI같은걸 만들어서 해결할 수 있지 않을까 라는 상상도 하는데 일단은 좀 더 유즈케이스를 늘려서
+힌트를 찾으러 다녀야겠다.
+
 [reselect]:(https://github.com/reactjs/reselect)
 [batch enhancer]:(https://github.com/Revisolution/typed-redux-kit/blob/master/packages/batch-enhancer/readme.md)
 [mapped reducer]:(https://github.com/Revisolution/typed-redux-kit/blob/master/packages/mapped-reducer/readme.md)
