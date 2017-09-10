@@ -13,7 +13,7 @@ Redux 사용에 있어서 아쉬웠던 점들과 그걸 고쳐나간 경험을 �
 1. Memoization이 안된다.
 2. 비효율적인 리듀싱
   - 액션마다 렌더를 다시 시킨다.(Batched actions 처리에 불리)
-  - 모든 리듀서에 액션을 넘겨준다.
+  - 모든 리듀서에 액션을 넘겨준다.(combineReducers)
 3. 깊은 구조를 다루기 힘들다.
 
 하나씩 까엎어보자.
@@ -123,7 +123,7 @@ function * saga () {
 
 이제, 배열에 담긴 액션들을 다 리듀스하고나서 컴포넌트들에겐 최종적인 결과물만 알려주게 된다.
 
-## Mapped Reducer
+## Efficient reducing with Map
 
 또 다른 문제로, `combineReducers`과 `switch` 구문이 별로 마음에 안들었다. 처음 쓰기엔 쉽지만,
 앱이 커질수록 매 액션들을 모든 스위치 구문으로 통과시키는건 너무 비효율 적인듯 해보였다.
@@ -193,7 +193,7 @@ store.dispatch({
 } as Actions.Plus)
 ```
 
-## Trackable
+## Deep state
 
 Redux에선 깊은 데이터 구조를 다루기 매우 귀찮다. 이는 변경 사항을 항상 Immutable한 상태로 유지해야하기 떄문인데, 그냥 오브젝트로 깊은 곳에 있는 값을 수정하려 할경우 다음과 같이 된다:
 
