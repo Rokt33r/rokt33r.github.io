@@ -311,7 +311,7 @@ expect(reducedState).not.toBe(defaultState)
 어쩌면 CLI같은걸 만들어서 해결할 수 있지 않을까 라는 상상도 하는데 일단은 좀 더 유즈케이스를 늘려서
 힌트를 찾으러 다녀야겠다.
 
-[reselect]:(https://github.com/reactjs/reselect)
-[batch enhancer]:(https://github.com/Revisolution/typed-redux-kit/blob/master/packages/batch-enhancer/readme.md)
-[mapped reducer]:(https://github.com/Revisolution/typed-redux-kit/blob/master/packages/mapped-reducer/readme.md)
-[trackable]:(https://github.com/Revisolution/typed-redux-kit/blob/master/packages/trackable/readme.md)
+[reselect]:https://github.com/reactjs/reselect
+[batch enhancer]:https://github.com/Revisolution/typed-redux-kit/blob/master/packages/batch-enhancer/readme.md
+[mapped reducer]:https://github.com/Revisolution/typed-redux-kit/blob/master/packages/mapped-reducer/readme.md
+[trackable]:https://github.com/Revisolution/typed-redux-kit/blob/master/packages/trackable/readme.md
