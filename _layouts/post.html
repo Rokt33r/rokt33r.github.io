@@ -13,9 +13,10 @@ layout: page
 
   <div class="post-info">
     {% if page.tags.size > 0 %}
+      keywords:
       <span class="post-info-tags">
         {% for tag in page.tags %}
-          <span class="post-info-tags-item"><i class="fa fa-tag"></i> {{tag}}</span>
+          <span class="post-info-tags-item">{{tag}}</span>
         {% endfor %}
       </span>
     {% endif %}
