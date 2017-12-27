@@ -10,7 +10,7 @@ title: About Rokt33r
 
 개발을 즐기는 기업가（企業家）입니다.
 
-An Entrepreneur who enjoying programming.
+An Entrepreneur who enjoys programming.
 
 ## Stack
 
@@ -22,11 +22,11 @@ Mainly using React, Electron and Node.js.
 
 - Korean(native)
 - Japanese(almost fluent)
-- English(broken, though I'd been working at the US company)
+- English(broken, though I've been working at a US company)
 
 ## History
 
-- Chief Pruduct Officer of MAISIN&CO.(2018.1)
+- Chief Product Officer of MAISIN&CO.(2018.1)
 - [Launch Enginner of Revisolution (2017.4-2017.12)](https://revisolution.com)
 - [Boostnote developer/maintainer (2015-2016)](https://github.com/BoostIO/Boostnote/graphs/contributors)
 
