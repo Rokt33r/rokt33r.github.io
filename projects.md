@@ -14,9 +14,13 @@ title: Projects of Rokt33r
 
 [Remark]에 수식 작성이 가능한 인라인과 블럭요소를 읽는 파서와 이 요소들을 KaTeX를 통해 브라우저에서 볼 수 있도록 렌더링 해주는 라이브러리입니다.
 
-## [한국어로 배우는 리액트](https://github.com/Rokt33r/learn-react-in-korean)
+## [Boostnote](https://boostnote.io)
 
-한국어로된 리액트 관련 포스팅이나 웹사이트의 모음입니다. 해외 포스팅들의 번역도 하고 있습니다.
+오픈소스 마크다운/스닙펫 노트 앱입니다. 일렉트론과 React를 써서 개발하였고, 오래전에 팀에서 이탈했지만 최근 다시 복귀하여 활동중에 있습니다.
+
+## [Boostlog](https://boostlog.io)
+
+미디엄과 비슷한 블로깅 플랫폼입니다. React와 Next.js를 써서 개발하고 있습니다. 현재 알파릴리즈 단계입니다.
 
 [Remark]: https://github.com/wooorm/remark
 [remark-math]: https://github.com/rokt33r/remark-math

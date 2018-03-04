@@ -22,13 +22,20 @@ Mainly using React, Electron and Node.js.
 
 - Korean(native)
 - Japanese(almost fluent)
-- English(broken, though I've been working at a US company)
+- English(broken, though I'd been working at a US company)
+
+## Location
+
+- Seoul or Busan, Korea
+- Tokyo, Japan
 
 ## History
 
-- Chief Product Officer of MAISIN&CO.(2018.1)
+- [Chief Executive Officer of Mano Technology Co., Ltd. (2018.2-now)](http://www.manotech.kr/) - on construction
+- [Chief Product Officer of BoostIO (2018.1-now)](https://boostio.co)
 - [Launch Enginner of Revisolution (2017.4-2017.12)](https://revisolution.com)
 - [Boostnote developer/maintainer (2015-2016)](https://github.com/BoostIO/Boostnote/graphs/contributors)
+- Undergraduate student of Kyushu university(Majored in Aerospace) (2012.4-2017.3)
 
 ## Contact
 
