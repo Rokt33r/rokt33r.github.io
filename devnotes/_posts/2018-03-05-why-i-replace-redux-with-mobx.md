@@ -124,14 +124,14 @@ Uncaught TypeError: Cannot read property 'deep' of undefined
 # 4. 아픈 손가락과 의외로 작지않은 러닝코스트
 
 Redux는 기능을 하나 추가하려면 ActionType과 ActionCreator, 그리고 이걸 다루는 Reducer를 손대어야한다. 여기에 Typescript를 쓸경우, Action에 대한 인터페이스 역시 만들어주어야 하므로 매우 피곤하다.
-그리고 combineReducers를 쓰려면 **모든 액션 인터페이스**를 모아서 유니언타입으로 만들어주어야 하는데, 이것도 사람 할 짓이 못된다.
+그리고 `combineReducers`를 쓰려면 **모든 액션 인터페이스**를 모아서 유니언타입으로 만들어주어야 하는데, 이것도 사람 할 짓이 못된다.
 
 ```ts
 type AllAction = SetAAction | SetBAction | SetCAction | ...
 ```
 말그대로 모든 액션을 다 가져와야하므로 여러 모듈로 분리된 경우 순환의존이 일어나지 않도록 신경쓸 필요까지 생긴다.
 
-그리고 connect에서는 `mapStateToProps`, `mapDispatchToProps`, `mergeProps`의 결과값을 인터페이스로 관리해주어야한다. 그리고 이것들은 다 제네릭으로 주고 받으므로, 타입스크립트와 리덕스에 제대로된 이해가 된 사람이 아니고는 컴파일 에러를 통과조차 못할 것이다.
+그리고 `connect`에서는 `mapStateToProps`, `mapDispatchToProps`, `mergeProps`의 결과값을 인터페이스로 관리해주어야한다. 그리고 이것들은 다 제네릭으로 주고 받으므로, 타입스크립트와 리덕스에 제대로된 이해가 된 사람이 아니고는 컴파일 에러를 통과조차 못할 것이다.
 
 반면, MobX는 처음부터 Typescript로 쓰여있어서, Decorator를 언제 써야하는지만 익숙해지면 매우 심리스하게 개발을 할 수 있다. 어떤 값이 기억되야하는지, 언제 컴포넌트를 다시 렌더링해야하는지를 알아서 통제해주는 만큼, 이걸 직접 구축해야하는 Redux와 비교하면 훨씬 손가락이 안아프고 쉽지 않을까 생각한다.
 
