@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 왜 내가 Redux 대신 MobX를 쓰게 되었느냐.
-date: 2018-03-05 00:00:00 +0900
+date: 2018-03-05 04:00:00 +0900
 tags: [mobx, redux, typescript]
 ---
 
