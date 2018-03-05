@@ -46,7 +46,7 @@ class myState {
 @observer
 class MyComponent extends React.Component {
   render () {
-    return <div>{this.myState.total}</div>
+    return <div>{this.props.myState.total}</div>
   }
 }
 
