@@ -17,7 +17,7 @@ title: About Rokt33r
 
 ## Location
 
-- Seoul, Busan or Tokyo
+- Busan or Tokyo
 
 ## Career
 
